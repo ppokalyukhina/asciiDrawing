@@ -3,12 +3,18 @@
 namespace Plotting;
 
 interface FigurePlotting {
-    public const CROSS_STRING = "+";
-    public const X_STRING = "X";
-    public const SPACE_STRING = " ";
+    // Values
+    const CROSS_STRING = "+";
+    const X_STRING = "X";
+    const SPACE_STRING = " ";
+
+    // Sizes
+    const LARGE_SIZE = 11;
+    const MEDIUM_SIZE = 7;
+    const SMALL_SIZE = 5;
 
     /**
-     * @return string A figure for printing.
+     * @return string A generated figure ready for printing.
      */
     public function generate(int $lines) : string;
 }

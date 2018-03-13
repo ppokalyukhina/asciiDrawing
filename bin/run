@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -eu
+
+exec php -f "$(cd "$(dirname "$0")" && pwd)/run.php"
