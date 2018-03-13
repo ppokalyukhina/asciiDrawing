@@ -4,6 +4,9 @@ namespace Plotting\Figures;
 
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @coversDefaultClass Plotting\Figures\SmallSizeStars
+ */
 final class SmallSizeStarsTest extends TestCase {
     /**
      * @testdox If argument is in invalid range, method generate() should throw an exception.

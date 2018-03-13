@@ -6,6 +6,9 @@ use PHPUnit\Framework\TestCase;
 use Plotting\Figures\LargeSizeStars;
 use Plotting\Figures\SmallSizeStars;
 
+/**
+ * @coversDefaultClass Plotting\StarsFactory
+ */
 final class StarsFactoryTest extends TestCase {
     /**
      * @testdox If size is < 11, return small/Medium implementation of Stars, else return largeSize implementation.

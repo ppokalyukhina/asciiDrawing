@@ -4,6 +4,9 @@ namespace Plotting\Figures;
 
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @coversDefaultClass Plotting\Figures\ChristmasTree
+ */
 final class ChristmasTreeTest extends TestCase {
     /**
      * @dataProvider invalidSizesDataProvider
