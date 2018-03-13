@@ -12,6 +12,7 @@ It prints out 2 more figures with a random size.
 ## How to use
 * Clone the project
 * Go to the project directory
+* Run ``composer install``
 
 ### In web browser:
 * In your terminal execute: ``./bin/web-server``
