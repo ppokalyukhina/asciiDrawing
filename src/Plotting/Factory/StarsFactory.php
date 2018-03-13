@@ -2,17 +2,18 @@
 
 namespace Plotting;
 
-use Plotting\Christmas\BigSizeStars;
-use Plotting\Christmas\SmallSizeStars;
+use Plotting\Figures\LargeSizeStars;
+use Plotting\Figures\SmallSizeStars;
 
+/**
+ * Creates a new Implementation of a Star depending on the size.
+ */
 final class StarsFactory {
-    public static function createStarsObject(int $lines): string {
+    public static function createStarsObject(int $lines): FigurePlotting {
         if ($lines > 9) {
-            $bigStars = new BigSizeStars();
-            return $bigStars->generate($lines);
+            return new LargeSizeStars();
         }
 
-        $smallStars = new SmallSizeStars();
-        return $smallStars->generate($lines);
+        return new SmallSizeStars();
     }
 }

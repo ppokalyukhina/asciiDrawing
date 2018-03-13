@@ -1,6 +1,6 @@
 <?php
 
-namespace Plotting\Christmas;
+namespace Plotting\Figures;
 
 use Plotting\FigurePlotting;
 use Plotting\FigurePlottingHelper;
@@ -17,11 +17,11 @@ abstract class Stars extends FigurePlottingHelper implements FigurePlotting {
         $result = '';
         for ($x = $startCount, $spaces = $lines; $x <= $lines * 2; $spaces-=2, $x+=4) {
             if ($count === $this->calculateMedian($medianBase)) {
-                $result .= "{$this->addSpaces($spaces-1)}+{$this->addXstring($x)}+\n";
+                $result .= "{$this->addSpaces($spaces-1)}+{$this->addXvalueToString($x)}+\n";
                 break;
             }
 
-            $result .= "{$this->addSpaces($spaces)}{$this->addXstring($x)}\n";
+            $result .= "{$this->addSpaces($spaces)}{$this->addXvalueToString($x)}\n";
             $count++;
 
             $medianSpace = $spaces;
@@ -39,7 +39,7 @@ abstract class Stars extends FigurePlottingHelper implements FigurePlotting {
         $spaceLeft = 0;
         $result = '';
         for ($spaces = $medianSpace, $x = $medianStars; $x > 0; $x-=4, $spaces+=2) {
-            $result .= "{$this->addSpaces($spaces)}{$this->addXstring($x)}\n";
+            $result .= "{$this->addSpaces($spaces)}{$this->addXvalueToString($x)}\n";
 
             //When looping is over, keep the value of spaces left so + and last X can be added and be aligned with the rest of the generated figure.
             $spaceLeft = $spaces;
@@ -49,5 +49,13 @@ abstract class Stars extends FigurePlottingHelper implements FigurePlotting {
           'result' => $result,
           'spacesLeft' => $spaceLeft
         ];
+    }
+
+    protected function addSpaces(int $limit) : string {
+        return $this->generateRepeatedValue(FigurePlotting::SPACE_STRING, $limit);
+    }
+
+    private function addXvalueToString(int $limit) : string {
+        return $this->generateRepeatedValue(FigurePlotting::X_STRING, $limit);
     }
 }

@@ -1,14 +1,14 @@
 <?php
 
-namespace Plotting\Christmas;
+namespace Plotting\Figures;
 
 use Plotting\FigurePlotting;
 
 final class SmallSizeStars extends Stars {
     /** @inheritdoc */
-    public function generate(int $lines = 7) : string {
-        if (!($lines & 1) || $lines <= 3) {
-            throw new \InvalidArgumentException("Desired number of lines should be an odd number and it must be bigger than 3");
+    public function generate(int $lines = FigurePlotting::SMALL_SIZE) : string {
+        if (!($lines & 1) || $lines < FigurePlotting::SMALL_SIZE) {
+            throw new \InvalidArgumentException("Desired number of lines should be an odd number and it must be bigger than 3.");
         }
 
         $initialSpaces = $this->addSpaces($lines);

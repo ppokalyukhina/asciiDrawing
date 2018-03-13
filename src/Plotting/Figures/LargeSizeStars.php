@@ -1,14 +1,14 @@
 <?php
 
-namespace Plotting\Christmas;
+namespace Plotting\Figures;
 
 use Plotting\FigurePlotting;
 
-final class BigSizeStars extends Stars {
+final class LargeSizeStars extends Stars {
     /** @inheritdoc */
     public function generate(int $lines = 11) : string {
         if (!($lines & 1) || $lines < 9) {
-            throw new \InvalidArgumentException("Desired number of lines should be odd");
+            throw new \InvalidArgumentException("Desired number of lines should be odd and bigger than 11.");
         }
 
         $startingColumn = $this->addSpaces($lines + 1);
