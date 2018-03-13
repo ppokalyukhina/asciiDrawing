@@ -6,8 +6,8 @@ use PHPUnit\Framework\TestCase;
 
 final class StarsTest extends TestCase {
     public function testStars() {
-        $stars = new Stars();
+        $stars = new SmallSizeStars();
 
-        echo $stars->generate(4);
+        echo $stars->generate(5);
     }
 }

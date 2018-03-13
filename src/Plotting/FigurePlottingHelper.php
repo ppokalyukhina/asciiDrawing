@@ -3,7 +3,7 @@
 namespace Plotting;
 
 abstract class FigurePlottingHelper {
-    protected function addSpaces(int $limit) {
+    protected function addSpaces(int $limit) : string {
         return \str_repeat(FigurePlotting::SPACE_STRING, $limit);
     }
 
@@ -11,7 +11,7 @@ abstract class FigurePlottingHelper {
         return \str_repeat(FigurePlotting::X_STRING, $limit);
     }
 
-    protected function calculateMedian(int $originalNumber) {
-        return $median = ($originalNumber + 1) / 2;
+    protected function calculateMedian(int $originalNumber) : int {
+        return $originalNumber / 2;
     }
 }

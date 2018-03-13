@@ -15,7 +15,6 @@
          stopOnFailure="false"
          stopOnIncomplete="false"
          stopOnSkipped="false"
-         testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader"
          verbose="true"
          coverage-clover="clover.xml">
 

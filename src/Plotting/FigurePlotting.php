@@ -3,9 +3,9 @@
 namespace Plotting;
 
 interface FigurePlotting {
-    public const CROSS_STRING = "+";
-    public const X_STRING = "X";
-    public const SPACE_STRING = " ";
+    const CROSS_STRING = "+";
+    const X_STRING = "X";
+    const SPACE_STRING = " ";
 
     /**
      * @return string A figure for printing.
